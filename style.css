@@ -1,0 +1,243 @@
+/* import statements */
+@import url('https://fonts.googleapis.com/css2?family=Gloock&display=swap');
+
+/* Variables */
+:root {
+    --main-colour: #8B5FBF;
+    --filler-colour: #0C0F0A;
+    --secondary-colour: #FFFCE8;
+    --primary-colour: #FF5A5F;
+
+    --color1: #CA90FF;
+    --color2: #00C9AB;
+
+    --font: 'Gloock', serif;
+}
+
+/* css reset */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font);
+    font-size: 1rem;
+    min-height: 100vh;
+    scroll-margin-top: 3rem;
+    margin-top: 3.5rem;
+    background-color: var(--secondary-colour);
+}
+
+/* header / navar styling */
+
+nav {
+    background-color: var(--main-colour);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    min-width: 100%;
+    height: auto;
+    white-space: nowrap;
+}
+
+nav a {
+    display: inline-block;
+    text-decoration: none;
+    padding: 1rem;
+    color: var(--secondary-colour);
+    background-color: var(--main-colour);
+
+}
+
+nav a:hover,
+nav a:focus {
+    background-color: #008571;
+    transform: scale(1.2);
+}
+
+nav a:first-child {
+    background-color: var(--color2);
+}
+
+/* footer */
+footer {
+    /* position: fixed; */
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    color: var(--filler-colour);
+    padding: 0.1rem;
+    background-color: var(--color2);
+}
+
+/* main webpage styling */
+sidebar {
+    width: 10%;
+    position: fixed;
+    max-width: 10%;
+    box-sizing: border-box;
+    min-height: 100vh;
+    top: 2.5;
+    left: 0;
+    background-color: var(--filler-colour);
+
+    display: flex;
+    flex-flow: column wrap;
+    row-gap: 0.5rem;
+    padding-top: min(5%, 100px);
+    align-items: center;
+}
+
+main {
+    /* padding-left: 11.05%; */
+    background-color: var(--secondary-colour);
+    width: 100%;
+    margin: 2px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* elements styling */
+sidebar .logo {
+    width: 80%;
+    height: auto;
+    display: block;
+    border-radius: 50%;
+}
+
+sidebar .box {
+    width: 100%;
+    min-height: 30px;
+    text-align: center;
+    padding: 10px;
+    box-sizing: border-box;
+    background-color: #5f5e5e94;
+    color: var(--secondary-colour);
+
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bolder;
+    font-size: 1.5rem;
+    white-space: nowrap;
+    text-decoration: none;
+
+    transform: skewy(-15deg);
+
+}
+
+
+sidebar a:hover {
+    background-color: #00C9AB;
+}
+
+.main {
+    /* width: 90%; */
+    height: auto;
+    gap: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.main #taco-bg {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.main .img-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    transform: translateY(-50%);
+
+}
+
+.main .logo {
+    display: block;
+    align-items: center;
+    border-radius: 50%;
+    border: 5px solid var(--secondary-colour);
+}
+
+
+/* default options */
+.taco-option {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    flex-grow: 1;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.card {
+    /* border: 3px solid var(--filler-colour); */
+    border-radius: 2rem;
+    padding-bottom: 1.5rem;
+}
+
+.card img {
+    border-radius: 2rem;
+    border-bottom: none;
+}
+
+.card info {
+    padding: 2rem;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#space {
+    display: grid;
+    grid-template-columns: 10% 90%;
+}
+
+
+.card:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px var(--filler-colour);
+    transition: all 0.5s;
+}
+
+/* For Desktop View */
+@media screen and (min-width: 1024px) {}
+
+/* For Tablet View */
+@media screen and (min-device-width: 768px) and (max-device-width: 1024px) {}
+
+/* For Mobile Portrait View */
+@media screen and (max-device-width: 480px) and (orientation: portrait) {
+    sidebar {
+        display: none;
+    }
+
+    #space {
+        display: grid;
+        grid-template-columns: 0% 100%;
+    }
+
+    .taco-option .card {
+        border: 2px solid var(--filler-colour);
+        border-radius: 2rem;
+        background-color: #00C9AB;
+    }
+}
+
+/* For Mobile Landscape View */
+@media screen and (max-device-width: 640px) and(max-device-height: 480px) {}
+
+/* For Mobile Phones Portrait or Landscape View */
+@media screen and (max-device-width: 640px) {}
+
+
+
+
+
